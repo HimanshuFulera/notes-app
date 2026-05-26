@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Notes App</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;500&family=Kalam:wght@400&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="toolbar">
+
+            <button class="icon-btn"
+                    title="New Note">
+                <i class="fas fa-edit"></i>
+            </button>
+
+            <button class="icon-btn"
+                    title="Email">
+                <i class="fas fa-envelope"></i>
+            </button>
+
+            <button class="icon-btn"
+                    title="Search">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <button class="icon-btn"
+                    title="Delete">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+
+        </div>
+
+        <!-- HISTORY -->
+        <ul class="history-list">
+
+            <li class="history-item active"
+                data-content="">
+                New Note
+            </li>
+
+            {% for note in notes %}
+
+            <li class="history-item"
+                data-content="{{ note.content }}"
+                data-index="{{ loop.index0 }}">
+
+                {{ note.title }}
+
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-area">
+
+        <div class="container">
+
+            <header>
+
+                <h1>My Notes</h1>
+
+                <p class="subtitle">
+                    Capture your thoughts elegantly.
+                </p>
+
+            </header>
+
+            <form action="/add"
+                  method="POST"
+                  class="note-form">
+
+                <!-- TITLE -->
+                <input type="text"
+                       name="title"
+                       placeholder="Enter note title..."
+                       required
+                       class="title-input">
+
+                <div class="paper-wrapper">
+
+                    <!-- NOTE -->
+                    <textarea name="note"
+                              placeholder="Write a new note..."
+                              required></textarea>
+
+                    <button type="submit"
+                            class="btn-add">
+                        Add Note
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
