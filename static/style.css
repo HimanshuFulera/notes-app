@@ -182,9 +182,7 @@ body {
 
     padding: 40px;
 
-    position: relative;
-
-    z-index: -180;
+    margin-left: -180px;
 }
 
 /* =========================
