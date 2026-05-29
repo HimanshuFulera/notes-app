@@ -7,6 +7,14 @@ This project is a cloud-hosted Notes Application developed using Flask and deplo
 The application allows users to create, view, and delete notes through a simple and user-friendly web interface. The project demonstrates containerization, cloud deployment, and container orchestration concepts.
 
 ---
+## Live Demo
+
+Application URL:
+
+http://16.170.204.49:30007/
+
+> Note: The application is hosted on an AWS EC2 instance. Availability depends on the EC2 instance being active.
+
 
 ## Features
 
