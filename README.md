@@ -36,6 +36,21 @@ The application allows users to create, view, and delete notes through a simple 
 
 ---
 
+---
+
+## Screenshots
+
+1. Application Homepage
+   ![Application Homepage](screenshots/homepage.png)
+2. Running Docker Containers (`docker ps`)
+   ![Docker Containers](screenshots/docker-ps.png)
+3. Kubernetes Pods and Services (`kubectl get pods` `kubectl get svc`)
+   ![Kubernetes Pods](screenshots/kubectl-pods.png)
+4. AWS EC2 Dashboard
+   ![EC2 Dashboard](screenshots/ec2-dashboard.png)
+
+---
+
 ## Project Architecture
 
 ```text
@@ -240,22 +255,7 @@ This project demonstrates:
 - Multi-Node Kubernetes Cluster
 - Monitoring and Logging
 
----
 
-## Screenshots
-
-Add screenshots of:
-
-1. Application Homepage
-   ![Application Homepage](screenshots/homepage.png)
-2. Running Docker Containers (`docker ps`)
-   ![Docker Containers](screenshots/docker-ps.png)
-3. Kubernetes Pods and Services (`kubectl get pods` `kubectl get svc`)
-   ![Kubernetes Pods](screenshots/kubectl-pods.png)
-4. AWS EC2 Dashboard
-   ![EC2 Dashboard](screenshots/ec2-dashboard.png)
-
----
 
 **Himanshu Fulera**
 
